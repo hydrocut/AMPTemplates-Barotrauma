@@ -1,0 +1,12 @@
+{
+  "id": "3f015ba2-3302-4bdf-9355-24c2210759cd",
+  "authors": [
+    "Hydrocut",
+    "TeamKit"
+  ],
+  "origin": "https://github.com/hydrocut/AMPTemplates-Barotrauma.git",
+  "url": "https://github.com/hydrocut/AMPTemplates-Barotrauma",
+  "imagefile": "",
+  "prefix": "TeamKitBarotrauma",
+  "repotype": "AppTemplates"
+}
