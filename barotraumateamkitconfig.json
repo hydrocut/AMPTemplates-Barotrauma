@@ -1252,5 +1252,35 @@
       "False": "false",
       "True": "true"
     }
+  },
+  {
+    "DisplayName": "Admins",
+    "Category": "Barotrauma:stadia_controller",
+    "Subcategory": "Admins et modérateurs:shield_person:4",
+    "Description": "SteamID64 des admins (7656…), séparés par une virgule ou une espace. Tous les droits, rang « Admin » du serveur. Appliqué à chaque démarrage : enlever quelqu'un de la liste lui retire le rang au redémarrage suivant. Trouver un SteamID64 : profil Steam → clic droit → Copier l'URL, ou steamid.io.",
+    "Keywords": "admin,administrateur,rang,permissions,steamid,giverank",
+    "FieldName": "TKAdmins",
+    "InputType": "text",
+    "IsFlagArgument": false,
+    "ParamFieldName": "TKAdmins",
+    "IncludeInCommandLine": false,
+    "DefaultValue": "",
+    "Placeholder": "76561198000000000, 76561198000000001",
+    "EnumValues": {}
+  },
+  {
+    "DisplayName": "Modérateurs",
+    "Category": "Barotrauma:stadia_controller",
+    "Subcategory": "Admins et modérateurs:shield_person:4",
+    "Description": "SteamID64 des modérateurs, séparés par une virgule ou une espace. Rang « Moderator » du serveur : lancer et gérer les manches, choisir sous-marin et mode, expulser, journaux, réglages. Appliqué à chaque démarrage. Les droits donnés en jeu par ailleurs ne sont pas touchés.",
+    "Keywords": "moderateur,modo,moderator,rang,permissions,steamid",
+    "FieldName": "TKModerateurs",
+    "InputType": "text",
+    "IsFlagArgument": false,
+    "ParamFieldName": "TKModerateurs",
+    "IncludeInCommandLine": false,
+    "DefaultValue": "",
+    "Placeholder": "76561198000000002",
+    "EnumValues": {}
   }
 ]

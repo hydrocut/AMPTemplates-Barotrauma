@@ -71,3 +71,19 @@ Template d'origine : **Greelan** et **ThisIslandEarth**, dans
 qu'une variante corrigée — tout le travail de fond leur revient.
 
 Corrections et maintenance : [TeamKit](https://www.teamkit.fr).
+
+## Admins et modérateurs depuis AMP (3 oct. 2026)
+
+La console d'AMP n'atteint pas Barotrauma : `giverank`, `giveperm` ou `revokeperm` tapés dans AMP ne reçoivent
+aucune réponse du jeu. Le jeu relit en revanche `Data/clientpermissions.xml` à chaque démarrage.
+
+**Configuration → Barotrauma → Admins et modérateurs** : deux listes de SteamID64 (`7656…`), séparés par une
+virgule ou une espace. Avant chaque démarrage, l'étape `barotraumateamkitstart.json` (script `outils/permissions_amp.py`,
+passé à `python3 -c`) les écrit dans le fichier avec les rangs **Admin** et **Moderator** de `Data/permissionpresets.xml`.
+
+- Retirer quelqu'un de la liste lui retire le rang au redémarrage suivant.
+- Seuls les comptes posés par AMP sont retirés (mémo `Data/tk_amp_permissions.json`) : les droits donnés en jeu restent.
+- Un SteamID `STEAM_0:Y:Z` est aussi accepté.
+
+Le script ne doit contenir **ni guillemet double ni antislash** : il est passé tel quel dans les arguments de l'étape.
+Après toute modification de `outils/permissions_amp.py`, relancer le générateur pour régénérer `barotraumateamkitstart.json`.
